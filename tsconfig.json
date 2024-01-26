@@ -1,3 +1,27 @@
 {
-  "extends": "@repo/typescript-config/base.json"
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2017",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@barz/*": [
+        "./packages/*"
+      ],
+      "apps": [
+        "./apps/*"
+      ]
+    }
+  },
+  "exclude": [
+    "packages/**/tests/**",
+    "packages/**/dist/**"
+  ],
 }

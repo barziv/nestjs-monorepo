@@ -3,6 +3,39 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "tsconfig.json"
+  },
+  "monorepo": true,
+  "root": ".",
+  "projects": {
+    "app1": {
+      "type": "application",
+      "root": "apps/calculator",
+      "entryFile": "main",
+      "sourceRoot": "apps/calculator/src",
+      "compilerOptions": {
+        "tsConfigPath": "./apps/calculator/tsconfig.json"
+      }
+    },
+    "@barz/math": {
+      "type": "library",
+      "root": "packages/math",
+      "entryFile": "index",
+      "sourceRoot": "packages/math",
+      "compilerOptions": {
+        "tsConfigPath": "packages/math/tsconfig.json"
+      }
+    },
+    "@barz/entities": {
+      "type": "library",
+      "root": "packages/entities",
+      "entryFile": "index",
+      "sourceRoot": "packages/entities",
+      "compilerOptions": {
+        "tsConfigPath": "packages/entities/tsconfig.json"
+      }
+    }
   }
 }

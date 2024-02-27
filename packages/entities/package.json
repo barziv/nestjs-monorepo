@@ -1,11 +1,8 @@
 {
   "name": "@barz/entities",
   "private": true,
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.t.js",
-  "exports": {
-    ".": "./index.ts"
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

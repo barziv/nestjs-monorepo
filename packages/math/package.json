@@ -2,10 +2,7 @@
     "name": "@barz/math",
     "private": true,
     "main": "dist/index.js",
-    "types": "dist/index.t.js",
-    "exports": {
-        ".": "./index.ts"
-    },
+    "types": "dist/index.d.js",
     "scripts": {
       "build": "tsc",
       "format": "prettier --write \"**/*.{ts,tsx,md}\"",

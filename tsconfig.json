@@ -1,27 +1,18 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "removeComments": true,
+    "baseUrl": ".",
+    "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2017",
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "composite": true,
-    "incremental": true,
-    "baseUrl": ".",
     "paths": {
-      "@barz/*": [
-        "./packages/*"
+      "@barz/math": [
+        "packages/math/dist/*"
       ],
-      "apps": [
-        "./apps/*"
+      "@barz/entities": [
+        "packages/entites/*"
       ]
-    }
-  },
-  "exclude": [
-    "packages/**/tests/**",
-    "packages/**/dist/**"
-  ],
+    },
+    "noEmit": true
+  }
 }

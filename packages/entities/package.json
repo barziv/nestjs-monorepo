@@ -1,7 +1,7 @@
 {
   "name": "@barz/entities",
   "private": true,
-  "main": "dist/index.js",
+  "main": "index.ts",
   "types": "dist/index.d.js",
   "scripts": {
     "build": "tsc",
